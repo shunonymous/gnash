@@ -544,7 +544,6 @@ get_buffer(AVCodecContext* avctx, AVFrame* pic)
     vaapi_set_surface(pic, surface);
 
     static unsigned int pic_num = 0;
-    pic->type = FF_BUFFER_TYPE_USER;
 #if LIBAVCODEC_VERSION_MAJOR < 54
     // This field has been unused for longer but has been removed with
     // libavcodec 54.
