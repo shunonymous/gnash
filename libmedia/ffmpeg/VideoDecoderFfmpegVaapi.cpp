@@ -46,20 +46,20 @@ static VAProfile get_profile(enum CODECID codec_id)
 
     const int *profiles;
     switch (codec_id) {
-    case CODEC_ID_MPEG2VIDEO:
+    case AV_CODEC_ID_MPEG2VIDEO:
         profiles = mpeg2_profiles;
         break;
-    case CODEC_ID_MPEG4:
-    case CODEC_ID_H263:
+    case AV_CODEC_ID_MPEG4:
+    case AV_CODEC_ID_H263:
         profiles = mpeg4_profiles;
         break;
-    case CODEC_ID_H264:
+    case AV_CODEC_ID_H264:
         profiles = h264_profiles;
         break;
-    case CODEC_ID_WMV3:
+    case AV_CODEC_ID_WMV3:
         profiles = wmv3_profiles;
         break;
-    case CODEC_ID_VC1:
+    case AV_CODEC_ID_VC1:
         profiles = vc1_profiles;
         break;
     default:
