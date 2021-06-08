@@ -116,14 +116,14 @@ public:
 	else return 0;
     }
     
-    std::string argument(const int i) const throw(ArgParserException)
+    std::string argument(const int i) const noexcept
     {
 	if( i >= 0 && i < arguments() ) return data[i].argument;
 	else return _error;
     }    
     
     template<typename T>
-    T argument(const int i) const throw (ArgParserException)
+    T argument(const int i) const
     {
         T t = 0;
         if( i >= 0 && i < arguments() )
